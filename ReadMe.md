@@ -2,12 +2,14 @@
 ### Part 1 - SQL
 ** Please note syntax is for PostgreSQL and assumes a db table titled 'student_tests'. Column names are also reformatted to snake_case
 
-1. ```SELECT quiz, score FROM (
+1. ```
+    SELECT quiz, score FROM (
     SELECT quiz, score, row_number() OVER (ORDER BY score) AS rn FROM student_tests
     WHERE name='Ana') AS a
     WHERE rn=2;
 
-2. ```WITH temp_table AS (
+2. ```
+    WITH temp_table AS (
     SELECT name, administration_date, score, dense_rank()
     OVER (PARTITION BY name ORDER BY administration_date DESC) AS rn
     FROM student_tests)
