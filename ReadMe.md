@@ -1,6 +1,6 @@
 # Achievement First Coding Challenge
 ### Part 1 - SQL
-** Please note syntax is for PostgreSQL and assumes a db table titled 'student_tests' and column names are reformatted to snake_case
+** Please note syntax is for PostgreSQL and assumes a db table titled 'student_tests'. Column names are also reformatted to snake_case
 
 1. ```SELECT quiz, score FROM (
     SELECT quiz, score, row_number() OVER (ORDER BY score) AS rn FROM student_tests
