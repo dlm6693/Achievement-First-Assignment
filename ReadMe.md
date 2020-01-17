@@ -17,7 +17,7 @@
     b.administration_date_prior_attempt, b.prior_score
     FROM temp_table a
     INNER JOIN (
-    SELECT name, administration_date AS administration_prior_attempt, score AS prior_score
+    SELECT name, administration_date AS administration_date_prior_attempt, score AS prior_score
     FROM temp_table
     WHERE rn=2) AS b
     ON b.name = a.name
