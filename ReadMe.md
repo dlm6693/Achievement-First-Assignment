@@ -1,14 +1,11 @@
 # Achievement First Coding Challenge
-## David Miller Submission
-
-## Instructions
 ### Part 1 - SQL
 ** Please note syntax is for PostgreSQL and assumes a db table titled 'student_tests' and column names are reformatted to snake_case
 
 1. ```SELECT quiz, score FROM (
     SELECT quiz, score, row_number() OVER (ORDER BY score) AS rn FROM student_tests
     WHERE name='Ana') AS a
-    WHERE rn=2;```
+    WHERE rn=2;
 
 2. ```WITH temp_table AS (
     SELECT name, administration_date, score, dense_rank()
@@ -22,7 +19,7 @@
     FROM temp_table
     WHERE rn=2) AS b
     ON b.name = a.name
-    WHERE a.rn=1;```
+    WHERE a.rn=1;
 
 ### Part 2 - GitHub API with Python
 1. Clone down this repo, open your command line tool and cd into the directory
