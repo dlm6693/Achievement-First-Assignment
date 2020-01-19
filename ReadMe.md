@@ -8,7 +8,6 @@
     WHERE student_id=3) AS a
     WHERE rn=2;
 
-
 2. ```
     WITH temp_table AS (
     SELECT student_id, name, administration_date, score, 
@@ -23,7 +22,6 @@
     AS b
     ON b.student_id=a.student_id
     WHERE a.rn=1;
-
 
 ### Part 2 - GitHub API with Python
 1. Clone down this repo, open your command line tool and cd into the directory
